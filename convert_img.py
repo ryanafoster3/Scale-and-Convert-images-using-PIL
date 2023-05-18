@@ -4,7 +4,7 @@ import os
 from PIL import Image
 
 # assigning input and output directories
-directory = 'images/'
+input_dir = 'images/'
 out_dir = '/opt/icons/'
 
 # determine image size, format, and rotation direction
@@ -13,10 +13,10 @@ ext = 'JPEG'
 rotation = -90
 
 # iterate over the files from input directory
-for filename in os.listdir(directory):
+for filename in os.listdir(input_dir):
     # ensures item is a file and that files starting
     # with 'ic_' are edited
-    f = os.path.join(directory, filename)
+    f = os.path.join(input_dir, filename)
     if os.path.isfile(f) and filename.startswith('ic_'):
         # creates output directory path and new file name
         # opens image, rotates (rotation), resizes (size), and saves
